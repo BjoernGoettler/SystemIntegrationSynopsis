@@ -3,7 +3,6 @@ from datetime import datetime
 from pydantic import BaseModel
 
 class StatisticsReturnModel(BaseModel):
-    computed: datetime
     amount_max: float
     amount_min: float
     amount_avg: float
