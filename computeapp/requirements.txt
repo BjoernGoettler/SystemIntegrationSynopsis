@@ -1,4 +1,4 @@
 pandas
-fastapi
+fastapi[standard]
 uvicorn
 python-multipart
