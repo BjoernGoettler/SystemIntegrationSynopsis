@@ -1,11 +1,14 @@
+using DataService.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace DataService;
 
-public class StatisticsContext: DbContext
+public class StatisticsDbContext: DbContext
 {
-    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+    public StatisticsDbContext(DbContextOptions<StatisticsDbContext> options)
         : base(options)
     {
     }
+    
+    public DbSet<StatisticsModel> Statistics { get; set; }
 }
