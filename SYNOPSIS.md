@@ -5,7 +5,7 @@
 - Motivation
 - Theory
 - Practice
-- Discussion
+- Conclusion
 
 ## Motivation
 
@@ -124,6 +124,12 @@ builder.Services.AddDbContext<StatisticsDbContext>(options => options.UseInMemor
 ```
 EntityFramework offers us an In-memory database that we use for this project. Because of the dependency injection, we can configure this how we want it. If the project gets some traction in real life, it's easy for us to just change the database on the fly, or due to changes in the environment
 
-## Discussion
+## Conlusion
 
-- Yay...discuss!!!
+The project showed a way of connecting two services, written in each their language.
+For one service we used C# to give us a simple API, and for the other service we used Python for computations.
+One should think before juggling languages around like this, it introduces a lot of overhead when it comes to development skills, since you will have to maintain two languages. On the other hand, if you can agree on the DTO's it make out-sourcing simpler, because you could just specify what data you havem and what you expect to get back,
+and then let the implementers decide on what technology to solve it with
+
+When interfacing microservices with each other we can benefit from them being agnostic to who uses them, and this project demonstrates that.
+It would, however, not take much effort to do the exact same computation in plain C#, and when asked how much power Python uses compared to dotnet, we would have to answer that the difference is significant
