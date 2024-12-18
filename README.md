@@ -1,7 +1,17 @@
 # System Integration synopsis
 
-## Motivation
+## Helicopter overview
 
-Python has a large adoption amongst data scientists, and therefor a quite substansial standard library for data science purposes.
+The DataService provides an API that takes a CSV-file as input
+As a prove of concept the [file](sample_data/bibliotek_sampledata.csv) contains a list of all the writers who received money from having their books at the library.
+The file layout is:
 
-This project will demonstrate how a service, written in C#, can hand over some semi-hard computation, to a data-service written in python
+| Name | Amunt Digital | Amount Physical | Amount Total |
+| ---- | ------------- | --------------- | ------------ |
+| Bobby | 10.0 | 11.0 | 22.0 |
+
+The API sends the file to the Compute Service, which calculates some statistics and returns an object that is mapped to a database model and added to the database.
+
+The system landscape is like this:
+
+![System Landscape](documentation/diagrams/DataService.png)
