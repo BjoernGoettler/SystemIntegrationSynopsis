@@ -10,7 +10,7 @@ public class Client
 {
     private readonly HttpClient _httpClient;
     private readonly JsonSerializerOptions _serializerOptions;
-    private readonly Uri _uri = new Uri("http://127.0.0.1:8000/");
+    private readonly Uri _uri = new Uri("http://computeservice:8000/");
     
     public Client()
     {
