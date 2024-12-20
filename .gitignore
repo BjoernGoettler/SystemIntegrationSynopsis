@@ -5,3 +5,4 @@ __pycache__
 .venv
 synopsis.pdf
 DataApp.sln.DotSettings.user
+.DS_Store
