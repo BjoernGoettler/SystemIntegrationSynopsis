@@ -124,7 +124,7 @@ builder.Services.AddDbContext<StatisticsDbContext>(options => options.UseInMemor
 ```
 EntityFramework offers us an In-memory database that we use for this project. Because of the dependency injection, we can configure this how we want it. If the project gets some traction in real life, it's easy for us to just change the database on the fly, or due to changes in the environment
 
-## Conlusion
+## Conclusion
 
 The project showed a way of connecting two services, written in each their language.
 For one service we used C# to give us a simple API, and for the other service we used Python for computations.
